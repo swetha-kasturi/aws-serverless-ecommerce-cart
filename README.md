@@ -93,3 +93,10 @@ Use these JSON bodies with POST requests:
   "userId": "user123",
   "productId": "prod567"
 }
+
+🚀 Live Demo Links
+🛒 Frontend App (S3 Hosted):
+http://my-ecommerce-site-swetha123.s3-website.ap-south-1.amazonaws.com/
+
+🔧 Lambda Test URL (Remove from Cart):
+https://2ewoincc37m5w67qfd5djqfq4i0dcdst.lambda-url.ap-south-1.on.aws/
