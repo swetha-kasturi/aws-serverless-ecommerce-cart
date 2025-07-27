@@ -51,7 +51,7 @@ ecommerce-cart/
 ```bash
 git clone https://github.com/your-username/ecommerce-cart.git
 cd ecommerce-cart
-2. Setup Python environment for AWS Lambda functions
+***2. Setup Python environment for AWS Lambda functions***
 cd lambda
 pip install -r ../requirements.txt -t .
 3. Deploy Lambda Functions
