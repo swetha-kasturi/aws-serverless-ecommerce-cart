@@ -51,7 +51,7 @@ ecommerce-cart/
 ```bash
 git clone https://github.com/your-username/ecommerce-cart.git
 cd ecommerce-cart
-***2. Setup Python environment for AWS Lambda functions***
+2. Setup Python environment for AWS Lambda functions
 cd lambda
 pip install -r ../requirements.txt -t .
 3. Deploy Lambda Functions
@@ -70,6 +70,10 @@ Create a REST API with three POST methods:
 /remove → remove_from_cart Lambda
 Enable CORS
 Deploy API and note the Invoke URL
+6. Test Using Postman
+Use the deployed API Gateway endpoint.
+Set method to POST or GET.
+In POST requests, use raw JSON body with Content-Type: application/json.
 
 📬 Test API with Postman
 Use these JSON bodies with POST requests:
