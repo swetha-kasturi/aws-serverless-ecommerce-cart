@@ -28,22 +28,22 @@ A fully serverless shopping cart web app built with AWS Lambda, API Gateway, Dyn
 
 ## 📁 Project Structure
 
-ecommerce-cart/
-├── index.html
-├── style.css
-├── script.js
-├── lambda/
-│ ├── add_to_cart.py
-│ ├── view_cart.py
-│ ├── remove_from_cart.py
-│ └── update_quantity.py
-├── events/
-│ ├── test_add.json
-│ ├── test_view.json
-│ ├── test_remove.json
-│ └── test_update.json
-├── requirements.txt
-└── README.md
+ecommerce-cart/  
+├── index.html  
+├── style.css  
+├── script.js  
+├── lambda/  
+│ ├── add_to_cart.py  
+│ ├── view_cart.py  
+│ ├── remove_from_cart.py  
+│ └── update_quantity.py  
+├── events/  
+│ ├── test_add.json  
+│ ├── test_view.json  
+│ ├── test_remove.json  
+│ └── test_update.json  
+├── requirements.txt  
+└── README.md  
 
 ---
 
