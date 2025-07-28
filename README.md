@@ -19,10 +19,10 @@ A fully serverless shopping cart web app built with AWS Lambda, API Gateway, Dyn
 
 ## 🧰 Tech Stack
 
-- **Frontend**: HTML, CSS, JavaScript
-- **Backend**: AWS Lambda (Python)
-- **Database**: AWS DynamoDB
-- **Other AWS Services**: API Gateway, S3, IAM, CloudWatch
+| Frontend           | Backend              | Database          | Other AWS Services  |
+|--------------------|----------------------|-------------------|---------------------|
+| HTML, CSS,         | AWS Lambda (Python)  | AWS DynamoDB      | API Gateway, S3,    |
+| JavaScript         |                      |                   | IAM, CloudWatch     |
 
 ---
 
@@ -51,40 +51,42 @@ ecommerce-cart/
 
 ### *1. Clone the repository*
 
-```bash
-git clone https://github.com/swetha-kasturi/aws-serverless-ecommerce-cart.git
+git clone https://github.com/swetha-kasturi/aws-serverless-ecommerce-cart.git   
 cd aws-serverless-ecommerce-cart
-2. Setup Python environment for AWS Lambda functions
-cd lambda
+### *2. Setup Python environment for AWS Lambda functions*
+cd lambda  
 pip install -r ../requirements.txt -t .
-3. Deploy Lambda Functions (via AWS Console or CLI)
-Create four Lambda functions:
-add_to_cart
-view_cart
-remove_from_cart
-update_quantity
-Upload each corresponding .py file and attach IAM roles with permissions for:
-DynamoDB: PutItem, GetItem, UpdateItem, DeleteItem, Query
+### *3. Deploy Lambda Functions (via AWS Console or CLI)*
+Create four Lambda functions:  
+- add_to_cart  
+- view_cart  
+- remove_from_cart  
+- update_quantity
+  
+Upload each corresponding .py file and attach IAM roles with permissions for:  
+DynamoDB: PutItem, GetItem, UpdateItem, DeleteItem, Query  
 CloudWatch Logs
-4. Create and Configure DynamoDB Table
-Table Name: CartTable
-Partition Key: userId (String)
-Sort Key: productId (String)
-5. Setup API Gateway
+### *4. Create and Configure DynamoDB Table*
+- Table Name: CartTable  
+- Partition Key: userId (String)  
+- Sort Key: productId (String)  
+### *5. Setup API Gateway*
 Create a REST API with the following endpoints:
 
-Path	Method	Lambda Function
-/add	POST	add_to_cart
-/view	POST	view_cart
-/remove	POST	remove_from_cart
-/update	POST	update_quantity
+|Path	Method	|Lambda Function  | 
+|-------------|-----------------|
+|/add	POST	  |add_to_cart      |
+|/view	POST	|view_cart        |
+|/remove	POST|	remove_from_cart| 
+|/update	POST|update_quantity  |
 
-Enable CORS on each method.
-Deploy the API and note the Invoke URL.
-6. Test Using Postman
-Use the deployed API Gateway endpoint.
-Set method to POST or GET.
-In POST requests, use raw JSON body with Content-Type: application/json.
+- Enable CORS on each method.  
+- Deploy the API and note the Invoke URL.
+### *6. Test Using Postman*
+- Use the deployed API Gateway endpoint. 
+- Set method to POST or GET. 
+- In POST requests, use raw JSON body with    
+Content-Type: application/json.
 
 📬 Test API with Postman
 Set Headers:
@@ -92,41 +94,41 @@ Content-Type: application/json
 
 Use these JSON bodies with POST requests:
 
-➕ Add to Cart (/add)
+#### - ➕ Add to Cart (/add)
 {
   "userId": "user123",
   "productId": "prod567",
   "quantity": 2
 }
-👀 View Cart (/view)
+#### 👀 View Cart (/view)
 {
   "userId": "user123"
 }
-❌ Remove from Cart (/remove)
+#### ❌ Remove from Cart (/remove)
 {
   "userId": "user123",
   "productId": "prod567"
 }
-🔁 Update Quantity (/update)
+#### 🔁 Update Quantity (/update)
 {
   "userId": "user123",
   "productId": "prod567",
   "quantity": 3
 }
 
-🔗 Live URLs
-🛒 Frontend (S3 Hosted)
-Visit App
+🔗 Live URLs  
+🛒 Frontend (S3 Hosted)  
+   Visit App  
 
-🧪 Lambda Test URLs (API Gateway Endpoints)
-Add to Cart:
+🧪 Lambda Test URLs (API Gateway Endpoints)  
+#### Add to Cart:
 https://654eqnm8ah.execute-api.ap-south-1.amazonaws.com/prod/add-to-cart
 
-View Cart:
+#### View Cart:
 https://654eqnm8ah.execute-api.ap-south-1.amazonaws.com/prod/view-cart
 
-Remove from Cart:
+#### Remove from Cart:
 https://654eqnm8ah.execute-api.ap-south-1.amazonaws.com/prod/remove-from-cart
 
-Update Quantity:
+#### Update Quantity:
 https://654eqnm8ah.execute-api.ap-south-1.amazonaws.com/prod/update
