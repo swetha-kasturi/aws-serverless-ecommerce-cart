@@ -93,7 +93,7 @@ Content-Type: application/json
 
 Use these JSON bodies with POST requests:
 
-#### - ➕ Add to Cart (/add)
+####  ➕ Add to Cart (/add)
 `{
   "userId": "user123",
   "productId": "prod567",
