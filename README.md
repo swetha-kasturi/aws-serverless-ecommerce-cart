@@ -50,9 +50,8 @@ ecommerce-cart/
 ## 🛠️ Setup Instructions
 
 ### *1. Clone the repository*
-
 git clone https://github.com/swetha-kasturi/aws-serverless-ecommerce-cart.git   
-cd aws-serverless-ecommerce-cart
+cd aws-serverless-ecommerce-cart  
 ### *2. Setup Python environment for AWS Lambda functions*
 cd lambda  
 pip install -r ../requirements.txt -t .
@@ -86,7 +85,7 @@ Create a REST API with the following endpoints:
 - Use the deployed API Gateway endpoint. 
 - Set method to POST or GET. 
 - In POST requests, use raw JSON body with    
-Content-Type: application/json.
+`Content-Type: application/json.`
 
 📬 Test API with Postman
 Set Headers:
@@ -95,26 +94,26 @@ Content-Type: application/json
 Use these JSON bodies with POST requests:
 
 #### - ➕ Add to Cart (/add)
-{
+`{
   "userId": "user123",
   "productId": "prod567",
   "quantity": 2
-}
+}`
 #### 👀 View Cart (/view)
-{
+`{
   "userId": "user123"
-}
+}`
 #### ❌ Remove from Cart (/remove)
-{
+`{
   "userId": "user123",
   "productId": "prod567"
-}
+}`
 #### 🔁 Update Quantity (/update)
-{
+`{
   "userId": "user123",
   "productId": "prod567",
   "quantity": 3
-}
+}`
 
 🔗 Live URLs  
 🛒 Frontend (S3 Hosted)  
@@ -122,13 +121,13 @@ Use these JSON bodies with POST requests:
 
 🧪 Lambda Test URLs (API Gateway Endpoints)  
 #### Add to Cart:
-https://654eqnm8ah.execute-api.ap-south-1.amazonaws.com/prod/add-to-cart
+`https://654eqnm8ah.execute-api.ap-south-1.amazonaws.com/prod/add-to-cart`
 
 #### View Cart:
-https://654eqnm8ah.execute-api.ap-south-1.amazonaws.com/prod/view-cart
+`https://654eqnm8ah.execute-api.ap-south-1.amazonaws.com/prod/view-cart`
 
 #### Remove from Cart:
-https://654eqnm8ah.execute-api.ap-south-1.amazonaws.com/prod/remove-from-cart
+`https://654eqnm8ah.execute-api.ap-south-1.amazonaws.com/prod/remove-from-cart`
 
 #### Update Quantity:
-https://654eqnm8ah.execute-api.ap-south-1.amazonaws.com/prod/update
+`https://654eqnm8ah.execute-api.ap-south-1.amazonaws.com/prod/update`
